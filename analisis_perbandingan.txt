@@ -1,0 +1,40 @@
+
+PEMBAHASAN PERBANDINGAN MODEL
+==============================
+Penelitian ini membandingkan empat model machine learning untuk
+klasifikasi gambar sampah, mengacu pada literatur berikut:
+
+1. CNN (Convolutional Neural Network)
+   Haqqi et al. (2024) melaporkan akurasi 95% menggunakan CNN
+   dengan 2.848 gambar dan 6 kelas. Penelitian ini mereplikasi
+   arsitektur tersebut dengan tambahan Batch Normalization dan
+   Global Average Pooling untuk regularisasi lebih baik.
+
+2. SVM (Support Vector Machine)
+   Yulita et al. (2023) menemukan bahwa kombinasi Inception-V3
+   sebagai ekstraktor fitur dan SVM kernel RBF menghasilkan F1-score
+   0.874, melampaui Decision Tree (0.585) dan Random Forest (0.689).
+   Pada penelitian ini, HOG digunakan sebagai alternatif ekstraktor
+   fitur yang lebih ringan secara komputasi.
+
+3. Decision Tree
+   Jijo & Abdulazeez (2021) merangkum berbagai studi Decision Tree
+   dengan akurasi 83.3%–99.93% tergantung dataset. Decision Tree
+   rentan terhadap overfitting karena pohon yang terlalu dalam.
+
+4. Random Forest
+   Lau et al. (2025) mencapai akurasi 96% menggunakan Random Forest
+   + HOG dengan dataset organik vs. anorganik. Ensemble 150 pohon
+   mengurangi variansi dan meningkatkan stabilitas prediksi.
+
+KELEBIHAN DAN KEKURANGAN:
+  CNN           : (+) Akurasi tinggi, ekstraksi fitur otomatis
+                  (-) Membutuhkan GPU dan data besar
+  SVM           : (+) Efektif pada fitur berdimensi tinggi
+                  (-) Lambat pada dataset sangat besar
+  Decision Tree : (+) Mudah diinterpretasi, cepat dilatih
+                  (-) Rentan overfitting
+  Random Forest : (+) Stabil, tahan overfitting
+                  (-) Kurang interpretatif dibanding DT tunggal
+
+Model terbaik: SVM RBF dengan akurasi 66.67%
