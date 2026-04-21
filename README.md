@@ -69,12 +69,14 @@ Garbage-Classification-System/
 └── README.md
 ---
 
+
 ## 3. 📊 Dataset
 
 - **Nama Dataset:** Garbage Classification Dataset
 - **Sumber:** Kaggle
 - **Jumlah Data:** 2.527 Data Gambar
 - **Kategori:** 7 jenis sampah (plastic, paper, metal, glass, cardboard, dll.)
+
 
 ### **Fitur Utama**
 
@@ -86,6 +88,7 @@ Garbage-Classification-System/
 | Jumlah Kelas           |  7 Kategori                             |  
 
 ---
+
 
 ## 4. 🔧 Data Preparation
 
@@ -100,6 +103,7 @@ Tahapan data preparation yang dilakukan:
 - **Data Splitting (train-test split)**
 
 ---
+
 
 ## 5. 🤖 Modeling
 
@@ -118,7 +122,9 @@ Model yang digunakan dalam proyek ini:
 
 ---
 
+
 ## 6. 🧪 Evaluation
+
 
 ### **Metrik Evaluasi**
 
@@ -126,6 +132,7 @@ Model yang digunakan dalam proyek ini:
 - Precision
 - Recall
 - F1-Score
+
 
 ### **Hasil Evaluasi**
 
@@ -139,6 +146,7 @@ Metrik yang digunakan: Accuracy
 
 ---
 
+
 ## 7. 🏁 Kesimpulan
 
 - **Model Terbaik:** SVM dengan Fitur HOG
@@ -147,6 +155,7 @@ Metrik yang digunakan: Accuracy
   CNN belum optimal karena membutuhkan dataset yang lebih besar untuk belajar fitur secara maksimal.
 
 ---
+
 
 ## 8. 🔮 Future Work
 
@@ -157,6 +166,7 @@ Metrik yang digunakan: Accuracy
 
 ---
 
+
 ## 9. 🔁 Reproducibility
 
 Untuk mereproduksi proyek ini:
@@ -165,6 +175,7 @@ Untuk mereproduksi proyek ini:
 - Jalankan notebook `ML_Project.ipynb` secara berurutan
 
 ---
+
 
 ## 🛠️ Tools & Libraries
 
