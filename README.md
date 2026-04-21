@@ -145,7 +145,6 @@ python main.py
 Atau gunakan Google Colab untuk menjalankan notebook.
 
 Struktur Folder
-
 ├── dataset/
 ├── output_model/
 │   ├── model_cnn.h5
@@ -156,8 +155,7 @@ Struktur Folder
 │   └── label_encoder.pkl
 ├── notebooks/
 ├── src/
-├── README.md
-
+└── README.md
 Kesimpulan
 Model SVM dengan fitur HOG terbukti memberikan performa terbaik dalam kondisi dataset terbatas, mengungguli CNN yang memerlukan data lebih besar untuk optimal.
 
