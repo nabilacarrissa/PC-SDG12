@@ -105,10 +105,10 @@ Optimizer: Adam (lr = 0.0001)
 
 Hasil Perbandingan Model
 Model Akurasi
-SVM (RBF) 95.4%
-Random Forest 93.1%
-Decision Tree 88.6%
-CNN 79.3%
+SVM (RBF) 66.66%
+Random Forest 59.90%
+Decision Tree 39.13%
+CNN 22.22%
 
 Insight utama:
 
@@ -148,12 +148,12 @@ Struktur Folder
 
 ├── dataset/
 ├── output_model/
-│ ├── model_cnn.h5
-│ ├── model_svm.pkl
-│ ├── model_rf.pkl
-│ ├── model_dt.pkl
-│ ├── scaler.pkl
-│ └── label_encoder.pkl
+│   ├── model_cnn.h5
+│   ├── model_svm.pkl
+│   ├── model_rf.pkl
+│   ├── model_dt.pkl
+│   ├── scaler.pkl
+│   └── label_encoder.pkl
 ├── notebooks/
 ├── src/
 ├── README.md
