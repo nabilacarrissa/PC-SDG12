@@ -145,17 +145,29 @@ python main.py
 Atau gunakan Google Colab untuk menjalankan notebook.
 
 Struktur Folder
+
 ├── dataset/
+
 ├── output_model/
+
 │   ├── model_cnn.h5
+
 │   ├── model_svm.pkl
+
 │   ├── model_rf.pkl
+
 │   ├── model_dt.pkl
+
 │   ├── scaler.pkl
+
 │   └── label_encoder.pkl
+
 ├── notebooks/
+
 ├── src/
+
 └── README.md
+
 Kesimpulan
 Model SVM dengan fitur HOG terbukti memberikan performa terbaik dalam kondisi dataset terbatas, mengungguli CNN yang memerlukan data lebih besar untuk optimal.
 
