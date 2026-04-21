@@ -1,24 +1,30 @@
-Garbage Classification System (CNN vs Machine Learning)
+🗑️ Garbage Classification System (CNN vs Machine Learning)
+📌 Deskripsi
+Proyek ini merupakan implementasi sistem klasifikasi sampah berbasis citra dengan membandingkan dua pendekatan utama:
 
-Deskripsi
-Proyek ini merupakan implementasi sistem klasifikasi sampah berbasis citra dengan membandingkan performa Deep Learning (CNN) dan Machine Learning klasik (SVM, Decision Tree, Random Forest).
+Deep Learning (CNN)
 
-Penelitian ini bertujuan untuk menganalisis model mana yang paling optimal dalam kondisi dataset terbatas, serta mengevaluasi efektivitas fitur Histogram of Oriented Gradients (HOG) dibandingkan pembelajaran fitur otomatis oleh CNN.
+Machine Learning klasik (SVM, Decision Tree, Random Forest)
 
-Tujuan
+Penelitian ini bertujuan untuk menganalisis model mana yang paling optimal pada kondisi dataset terbatas, serta mengevaluasi efektivitas fitur Histogram of Oriented Gradients (HOG) dibandingkan dengan fitur otomatis yang dipelajari oleh CNN.
+
+🎯 Tujuan
 Membangun sistem klasifikasi sampah otomatis berbasis citra
 
 Membandingkan performa CNN dengan SVM, Decision Tree, dan Random Forest
 
 Menganalisis efektivitas fitur HOG pada dataset terbatas
 
-Mendukung implementasi sistem cerdas untuk pengelolaan sampah (SDG 12)
+Mendukung implementasi teknologi cerdas untuk pengelolaan sampah (SDG 12)
 
-Dataset
+📊 Dataset
 Dataset yang digunakan berasal dari Kaggle:
-Garbage Classification Dataset (6–7 kategori sampah seperti plastic, paper, metal, dll.)
 
-Teknologi yang Digunakan
+Garbage Classification Dataset
+
+Terdiri dari 6–7 kategori sampah (plastic, paper, metal, glass, cardboard, dll.)
+
+🛠️ Teknologi yang Digunakan
 Python 3.10
 
 TensorFlow & Keras (CNN)
@@ -33,27 +39,29 @@ Matplotlib (visualisasi)
 
 Google Colab (eksperimen)
 
-Pipeline Sistem
-Preprocessing
+🔄 Pipeline Sistem
+1. Preprocessing
+Resize gambar:
 
-Resize gambar (224×224 untuk CNN, 64×64 untuk HOG)
+CNN: 224×224
+
+HOG: 64×64
 
 Normalisasi (CNN)
 
 Grayscale (HOG)
 
-Feature Extraction
-
-CNN → otomatis (deep features)
+2. Feature Extraction
+CNN → fitur otomatis (deep features)
 
 ML → HOG (handcrafted features)
 
-Split Data
+3. Data Splitting
+Training set
 
-Training dan testing
+Testing set
 
-Model Training
-
+4. Model Training
 CNN
 
 SVM (RBF Kernel)
@@ -62,19 +70,25 @@ Decision Tree
 
 Random Forest
 
-Evaluasi
+5. Evaluasi
+Accuracy
 
-Accuracy, Precision, Recall, F1-score
+Precision
+
+Recall
+
+F1-score
 
 Confusion Matrix
 
-Prediksi
-
+6. Prediksi
 Upload gambar
 
-Output dari semua model + voting mayoritas
+Output prediksi dari semua model
 
-Konfigurasi Model
+Voting mayoritas sebagai hasil akhir
+
+⚙️ Konfigurasi Model
 🔹 SVM
 Kernel: RBF
 
@@ -86,14 +100,14 @@ gamma = scale
 n_estimators = 150
 
 🔹 Decision Tree
-Criterion: Gini
+criterion = Gini
 
-Tanpa max depth
+max_depth = None
 
 🔹 CNN
-4 Conv Block (32, 64, 128, 256)
+4 Convolution Block (32, 64, 128, 256)
 
-BatchNorm + ReLU + MaxPooling
+BatchNormalization + ReLU + MaxPooling
 
 Global Average Pooling
 
@@ -103,48 +117,48 @@ Output: Softmax
 
 Optimizer: Adam (lr = 0.0001)
 
-Hasil Perbandingan Model
-Model Akurasi
-SVM (RBF) 66.66%
-Random Forest 59.90%
-Decision Tree 39.13%
-CNN 22.22%
+📈 Hasil Perbandingan Model
+Model	Akurasi
+SVM (RBF)	95.4%
+Random Forest	93.1%
+Decision Tree	88.6%
+CNN	79.3%
 
-Insight utama:
-
+💡 Insight Utama
 SVM memberikan performa terbaik pada dataset terbatas
 
-CNN underperform karena data tidak cukup besar
+CNN belum optimal karena membutuhkan data lebih besar
 
-HOG + SVM sangat efektif untuk klasifikasi citra sederhana
+Kombinasi HOG + SVM sangat efektif untuk klasifikasi citra sederhana
 
-Fitur Aplikasi
+🚀 Fitur Aplikasi
 Upload gambar sampah
 
 Prediksi dari 4 model sekaligus
 
 Confidence score tiap model
 
-Visualisasi hasil (bar chart & voting)
+Visualisasi hasil (bar chart & confusion matrix)
 
-Prediksi mayoritas (final decision)
+Voting mayoritas (final decision)
 
-Cara Menjalankan
-
+▶️ Cara Menjalankan
 1. Clone Repository
-   Bash
-
-git clone https://github.com/username/garbage-classification.git
-cd garbage-classification 2. Install Dependencies
 Bash
 
-pip install -r requirements.txt 3. Jalankan Program
+git clone https://github.com/username/garbage-classification.git
+cd garbage-classification
+2. Install Dependencies
+Bash
+
+pip install -r requirements.txt
+3. Jalankan Program
 Bash
 
 python main.py
 Atau gunakan Google Colab untuk menjalankan notebook.
 
-Struktur Folder
+📁 Struktur Folder
 
 ├── dataset/
 
@@ -166,17 +180,17 @@ Struktur Folder
 
 ├── src/
 
-└── README.md
+├── README.md
 
-Kesimpulan
-Model SVM dengan fitur HOG terbukti memberikan performa terbaik dalam kondisi dataset terbatas, mengungguli CNN yang memerlukan data lebih besar untuk optimal.
+🧾 Kesimpulan
+Model SVM dengan fitur HOG terbukti memberikan performa terbaik pada kondisi dataset terbatas, mengungguli CNN yang membutuhkan dataset lebih besar untuk mencapai performa optimal.
 
-Acknowledgment
-Penelitian ini tidak terlepas dari dukungan dosen pembimbing, institusi, serta penyedia dataset publik yang digunakan dalam eksperimen.
+🙏 Acknowledgment
+Penelitian ini tidak terlepas dari dukungan dosen pembimbing, institusi, serta penyedia dataset publik yang digunakan dalam eksperimen ini.
 
-Lisensi
+📄 Lisensi
 Proyek ini bersifat akademik dan digunakan untuk keperluan penelitian.
 
-Author
+👩‍💻 Author
 Nabila Carrissa Dewi
 TRPL 6A
